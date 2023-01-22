@@ -31,6 +31,6 @@
       <CheckBox fx:id="SignUpCheckBoxFeMal" layoutX="213.0" layoutY="281.0" mnemonicParsing="false" text="женщина" textFill="#fffafa" />
       <TextField fx:id="SignUpCountry" layoutX="100.0" layoutY="312.0" prefHeight="26.0" prefWidth="218.0" promptText="Страна" />
       <TextField fx:id="SignUpName1" layoutX="100.0" layoutY="358.0" prefHeight="26.0" prefWidth="218.0" promptText="login" />
-      <PasswordField layoutX="100.0" layoutY="404.0" prefHeight="26.0" prefWidth="218.0" promptText="Пароль" />
+      <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="404.0" prefHeight="26.0" prefWidth="218.0" promptText="Пароль" />
     </children>
 </AnchorPane>
