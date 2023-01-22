@@ -18,4 +18,7 @@ public class Shake {
 
 
     }
+    public void playAnim(){
+        tt.playFromStart();
+    }
 }

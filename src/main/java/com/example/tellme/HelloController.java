@@ -5,6 +5,8 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+import com.example.tellme.animations.Shake;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -86,10 +88,34 @@ public class HelloController {
         }
 
         if (counter >= 1) {
-            System.out.println("found!");
+            openNewScene("app.fxml");
+
         } else {
-            System.out.println("not found!");
+            Shake userLoginAnim =new Shake(loginField);
+            Shake userPassAnim =new Shake(PasswordField);
+            userLoginAnim.playAnim();
+            userPassAnim.playAnim();
+
+
+
         }
+
+    }
+    public  void openNewScene(String window)
+    {
+        SignUpButton.getScene().getWindow().hide();
+
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource(window));
+        try {
+            loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Parent root =loader.getRoot();
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root));
+        stage.showAndWait();
     }
 }
 /*
